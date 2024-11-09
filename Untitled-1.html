@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        nav{
+            height: auto;
+            width: 100%;
+            background-color: grey;
+            display: flex;
+            align-items: center
+           
+        }
+        nav>ul{
+            list-style-type: none;
+            display: flex;
+
+
+}
+        li{
+        margin-inline-end: 40px;
+        padding: 10px;
+        background-color: grey;
+
+        /* border: 1px solid black */
+    }
+    li:hover{
+        background-color: lightblue;
+        
+    }
+    li a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2px
+
+    }
+    .dropdown{
+        position: relative;
+    }
+    .dropdown-menu {
+        
+        position: absolute;
+        border-radius: 2px;
+        left: 0;
+        list-style-type: none;
+        display: none;
+        transition: 2s ease;
+        
+    }
+    
+    .dropdown li a{
+        color: white;
+    }
+    .dropdown:hover > ul{
+        display: block;
+    }
+    </style>
+</head>
+<body>
+ <nav>
+        <img src="./assets/fiverrImage/databaseimag.jpeg" height="50" width="50" alt="">
+
+     <ul>
+         <li><a href="#">item1</a></li>
+         <li class="dropdown">
+             <a href="#">dropdown</a>
+             <ul class="dropdown-menu"  style="padding-top:20px">
+                 <li class="dropdown"><a href="#">item1</a>
+                    <ul class="dropdown-menu" style="left:80px;" >
+                        <li><a href="#">item1</a></li>
+                        <li><a href="#">item2</a></li>
+                    </ul>
+                </li>
+                 <li class="dropdown"><a href="#">item2</a>
+                    <ul class="dropdown-menu" style="left:80px;" >
+                            <li><a href="#">item1</a></li>
+                            <li><a href="#">item2</a></li>
+                        </ul>
+                </li>
+             </ul>
+         </li>
+         <li>
+             <a href="#">item2</a>
+         </li>
+     </ul>
+ </nav>
+
+</body>
+</html>
